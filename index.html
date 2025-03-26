@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Lists, tables, images, tables, forms</title>
+  </head>
+  <body>
+    <h2>HTML LISTS</h2>
+    <h3>Ordered Lists</h3>
+    <!-- Ordered lists display lists that are numbered -->
+    <!-- They can be modified using two attributes: type attribute and start attribute they change with the numbering style either letters numbers
+          and roman numericals
+          You can also define the starting number according to your numbering type that is letters, roman numbers or numbers
+          by using the start attribute-->
+    <ol type="I" start="10">
+      <li>Counselor</li>
+      <li>Lawyer</li>
+      <li>Doctor</li>
+      <li>Teacher</li>
+      <li>Mentor</li>
+    </ol>
+    <h3>Unordered Lists</h3>
+    <!-- They are not numbered lists but they are listed in bullet points -->
+    <!-- They can be modified using type attribute to specify the design of the bullet points
+           The default one is disc There are round, square-->
+    <ul type="square">
+      <li>Counsels</li>
+      <li>Advocates</li>
+      <li>Treats</li>
+      <li>Teaches</li>
+      <li>Mentors</li>
+    </ul>
+    <h3>Definition Lists</h3>
+    <!-- Lists used to display terms and their descriptions 
+           Its format cannot be altered using HTML only CSS
+           dt for definition term and dd for definition description-->
+    <dt>FBI</dt>
+    <dd>Federal Bureau of Investigations</dd>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language</dd>
+    <dt>SQL</dt>
+    <dd>Structured Query Language</dd>
+
+    <h2>IMAGES</h2>
+    <!-- They are used to display images in a html file to improve usability-->
+     <!-- The images can be in your directory or can be a url outside your directory 
+      or when they are from the web -->
+      <!-- The necessary attributes for the image tag are src and alt and height and width 
+       which are optional if not using css
+       src: specifies the source where the image is locate either in your directory or from the web.
+       alt: specifies the alternative text to display incase your image are broken  -->
+       <!-- Ensure you use copyright free images  -->
+     <img src="https://img.freepik.com/free-psd/black-isolated-car_23-2151852894.jpg?ga=GA1.1.316884735.1742228197&semt=ais_hybrid"
+      alt="A huge black car" width="200" height="200" />
+
+
+     <h2>Tables</h2>
+     <!-- Html Tables consists of three distinct parts the table head which appears at the top
+      ,table body WHich appears inside the table and table foot which appears at the bottom -->
+      <!-- Each line item is defined as the table row denoted by tr
+           within the head and the table row you define the table header for each column
+           Its the titles for the columns-->
+      <!-- Table body is where the actual content goes to we first define the table row for each item
+           for each item in that row we define actual data using the table data denoted by td -->
+      <!-- The table foot is similar to the table head
+       The border attribute ensures there's borders between the columns and rows -->
+       <!-- For the tables there is a title that is defined using the caption tag -->
+
+     <table border="1">
+        <caption>Student Results</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>English</th>
+                <th>Math</th>
+                <th>Science</th>
+                <th>History</th>
+                <th>Geography</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Anelisa</td>
+                <td>85</td>
+                <td>93</td>
+                <td>74</td>
+                <td>81</td>
+                <td>80</td>
+            </tr>
+            <tr>
+              <td>Farhan</td>
+              <td>95</td>
+              <td>73</td>
+              <td>64</td>
+              <td>51</td>
+              <td>90</td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>English</th>
+                <th>Math</th>
+                <th>Science</th>
+                <th>History</th>
+                <th>Geography</th>
+            </tr>
+        </tfoot>
+     </table>
+
+
+      <h2>Forms</h2>
+      <!-- Collects user inputs using text fields, input fields, checkboxes, radio buttons
+       drop downs, buttons, select fields etc  -->
+       <!-- The form tag has two important attributes: action and method:
+        Action: used to specify the location where your form is submitted to for storage
+        Method: used to specify how the data will be transmitted 
+        Label tag displays the labels for the input fields it serves as a title
+        It contains a for attribute that is used to match up the specific input field
+        Input tag is used to specify the input field its a void tag since it doesnt
+        require a closing tag.
+        It has a type attribute to specify the type of data e.g text for text input field
+        Name is used to specify the actual data when its transmitted
+        id is used to specify the actual data in the webpage and its supposed to be unique.
+        placeholder guides the user what they are supposed to fill or hint the users
+        Required ensures the user must fill in the required input field
+        -->
+       <form action="" method="">
+        <label for="full_name">Full Names:</label>
+        <input type="text" id="full_name" name="full_name" placeholder="Enter your full names" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <br><br>
+
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <br><br>
+
+        <label for="languages">Languages</label>
+        <input type="checkbox" name="languages" value="English">English
+        <input type="checkbox" name="languages" value="French">French
+        <input type="checkbox" name="languages" value="Spanish">Spanish
+        <br><br>
+
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="Kenya">Kenya</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Burundi">Burundi</option>
+        </select>
+        <br><br>
+      <!-- Input tag can be used to embed buttons type for button, submit, or reset to clear the form
+       You can also use the button tag and type to be reset -->
+       <input type="submit" value="Register">
+       <button type="reset">Cancel</button>
+       </form>
+  </body>
+</html>
